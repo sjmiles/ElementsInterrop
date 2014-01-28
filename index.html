@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html>
+<head>
+  <title></title>
+  <!-- web components -->
+  <script src="components/platform/platform.js"></script>
+  <!-- raw custom element-->
+  <script>
+    var IconButton = function() {
+      this.style.cssText = 'display: inline-block; cursor: pointer;';
+      this.innerHTML = '<img src="http://lorempixel.com/32/32" style="vertical-align: middle; padding-bottom: 4px;"> Button';
+    }
+    IconButton.prototype = Object.create(HTMLElement.prototype);
+    IconButton.prototype.createdCallback = IconButton;
+    IconButton = document.registerElement('icon-button', IconButton);
+  </script>
+  <!-- x-tags -->
+  <link rel="import" href="components/x-tags-elements/x-iconbutton.html">
+  <!-- polymer -->
+  <link rel="import" href="components/polymer-ui-icon-button/polymer-ui-icon-button.html">
+</head>
+<body>
+  <h2>Raw Custom Element</h2>
+  <icon-button></icon-button>
+
+  <br><br><br>
+
+  <h2>x-tags element</h2>
+  <x-iconbutton src="http://placecage.com/30/30">Hello</x-iconbutton>
+
+  <br><br><br>
+
+  <h2>Polymer Element</h2>
+  <polymer-ui-icon-button icon="settings"></polymer-ui-icon-button>
+</body>
+</html>
