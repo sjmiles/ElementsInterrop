@@ -8,6 +8,11 @@
   "dependencies": {
     "platform": "Polymer/platform#master",
     "x-tags-elements": "Polymer/x-tags-elements#master",
-    "polymer-ui-icon-button": "Polymer/polymer-ui-icon-button#master"
+    "polymer-ui-icon-button": "Polymer/polymer-ui-icon-button#master",
+    "brick": "~0.9.2",
+    "x-tag-core": "~0.9.2"
+  },
+  "resolutions": {
+    "x-tag-core": "0.9.2"
   }
 }
